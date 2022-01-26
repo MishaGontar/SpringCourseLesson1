@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-<bean id="rosava" class="Tires.Rosava"/>
-<bean id="vitals" class="Engine.Vitals"/>
-
-<bean id="forte" class="Engine.Forte" scope="prototype">
-    <property name="name" value="SuperPuper" />
-</bean>
-
-    <bean id="car" class="Car.Car" scope="prototype">
-        <constructor-arg name="tire" ref="rosava"/>
-        <constructor-arg name="engine" ref="forte"/>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="rosava" class="Tires.Rosava" />
+    <bean id="vitals" class="Engine.Vitals" />
+    <bean id="forte" class="Engine.Forte" scope="prototype">
+        <property name="name" value="SuperPuper" />
     </bean>
-
+    <bean id="car" class="Car.Car" scope="prototype">
+        <constructor-arg name="tire" ref="rosava" />
+        <constructor-arg name="engine" ref="forte" />
+    </bean>
 </beans>

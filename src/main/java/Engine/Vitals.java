@@ -1,25 +1,24 @@
 package Engine;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Vitals implements Engine {
     private String name = "Vitals";
-    private int power = 100 ;
+    private int power = 100;
 
-    Vitals(){}
-    Vitals (String name){
+    Vitals(String name) {
         this.name = name;
     }
-    Vitals (int p){
+
+    Vitals(int p) {
         this.power = p;
-    }
-
-    public Vitals(String name, int power) {
-        this.name = name;
-        this.power = power;
     }
 
     @Override

@@ -1,21 +1,18 @@
 package Tires;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Rosava implements Tire{
-    private String name = "Rosava" ;
+@AllArgsConstructor
+@NoArgsConstructor
+public class Rosava implements Tire {
+    private String name = "Rosava";
     private String status = "good";
-    private int price = 100 ;
-
-    public Rosava(){}
-    public Rosava(String n , String s , int p){
-        this.name = n;
-        this.status = s;
-        this.price = p;
-    }
+    private int price = 100;
 
     @Override
     public void printTire() {
